@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget30"
+    android:layout_width="400dip"
+    android:layout_height="300dip" >
+
+    <LinearLayout
+        android:id="@+id/widget34"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/second"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/widget35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="50dip"
+            android:text="@string/install_warning_title"
+            android:textSize="22sp" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/widget36"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:indeterminateDrawable="@drawable/progressbar" >
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:textSize="22sp" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

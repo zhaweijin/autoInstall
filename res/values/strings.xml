@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <string name="app_name">AutoInstall</string>
+	<string name="preinstall_packet_search">preinstall packet search...</string>
+	<string name="preinstall_packet">preinstall application packet, please be patient to wait ...</string>
+	
+	<string name="install_warning_title">Installing the application ... Do not pull the power</string>
+	
+	
+	<color name="dialog_bg">#ff00326e</color>
+    <color name="dialog_bg_edge">#ff7a7d82</color>
+</resources>

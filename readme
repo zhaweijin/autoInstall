@@ -1,0 +1,50 @@
+--------------------------------------------------
+2013.03.29 SoftVersion<V1.0.0> DBVersion<0>
+---------------------------------------------------
+1.自动静默安装某目录下的apk
+以下是调用该服务的方法
+private void startService(){
+    	final String action = "com.imtbox.install.AUTOINSTALLSERVICE";
+    	final String KEY_APK_PATH = "key_apk_path";
+    	final String apk_path = "/etc/imt";
+    	
+    	Intent intent = new Intent(action);
+    	intent.putExtra(KEY_APK_PATH, apk_path);
+    	mContext.startService(intent);
+    }
+
+--------------------------------------------------
+2013.11.22 SoftVersion<V1.0.1> DBVersion<0>
+---------------------------------------------------
+1.添加安装与否的判断.如成功安装,则不再安装.否则继续安装.直到成功一次.
+
+--------------------------------------------------
+2014.04.09 SoftVersion<V1.0.2> DBVersion<0>
+---------------------------------------------------
+1.仅修改函数的名字
+-    public void setWallpaper(boolean installed){
++    public void setInstalled(boolean installed){
+
+
+----------------------modify by carter 
+增加了安装进度条显示，以免客户不知道是否安装完就断电，导致可能出现的问题
+private void startInstallProgress() {
+		final String KEY_APK_PATH = "key_apk_path";
+		final String apk_path = "/etc/imt";
+
+		ComponentName componentName = new ComponentName("com.imtbox.install",
+				"com.imtbox.install.ProgressBarDialog");
+		Intent intent = new Intent(Intent.ACTION_MAIN);
+		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		intent.setComponent(componentName);
+		intent.putExtra(KEY_APK_PATH, apk_path);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+				| Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+		try {
+			mContext.startActivity(intent);
+		} catch (ActivityNotFoundException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+	}

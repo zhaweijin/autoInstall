@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <string name="app_name">AutoInstall</string>
+	<string name="preinstall_packet_search">preinstall packet search...</string>
+	<string name="preinstall_packet">preinstall application packet, please be patient to wait ...</string>
+	
+	<string name="install_warning_title">正在安装应用...请勿拔电!</string>
+</resources>
